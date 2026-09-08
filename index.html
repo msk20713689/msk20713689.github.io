@@ -284,6 +284,54 @@
   .car-btn:hover { border-color: var(--accent); color: var(--accent); }
 
   .contact .wrap { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 56px;
+    width: 100%;
+    align-items: start;
+  }
+  .contact-form { display: flex; flex-direction: column; max-width: 440px; }
+  .contact-form label {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 18px 0 6px;
+  }
+  .contact-form label:first-of-type { margin-top: 0; }
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line);
+    padding: 8px 2px;
+    resize: vertical;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+  }
+  .contact-form button {
+    margin-top: 24px;
+    align-self: flex-start;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14.5px;
+    font-weight: 500;
+    padding: 12px 26px;
+    cursor: pointer;
+  }
+  .contact-form button:hover { background: var(--accent); }
+  .contact-form button:disabled { opacity: 0.6; cursor: default; }
+  .cf-status { margin-top: 14px; font-size: 14px; min-height: 20px; }
+  .cf-status.ok { color: var(--accent); }
+  .cf-status.err { color: #9a3b3b; }
   .contact h2 { max-width: 20ch; }
   .contact-links { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
   .contact-links a { text-decoration: none; font-size: 16px; }
@@ -307,6 +355,7 @@
     .expertise-grid { grid-template-columns: 1fr; gap: 24px; }
     .car-card { flex-basis: 240px; }
     .car-btn { display: none; }
+    .contact-layout { grid-template-columns: 1fr; gap: 32px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -420,11 +469,62 @@
       <div class="car-track" id="carTrack">
 
         <article class="car-card">
-          <img class="car-logo" src="images/logo-eci.jpg" alt="ECI Technology logo">
-          <div class="car-meta">Early career · New York</div>
-          <h3>ECI Technology</h3>
-          <div class="car-role">Co-Founder</div>
-          <p>Helped found a pioneer in electrochemical test equipment, later a Deloitte "Fast 100" award winner.</p>
+          <img class="car-logo" src="images/logo-integrichain.png" alt="IntegriChain logo">
+          <div class="car-meta">Jan 2020 – Present · Philadelphia, PA</div>
+          <h3>IntegriChain</h3>
+          <div class="car-role-list">
+            <div>VP, Marketing (2020–2023) → Senior VP, Marketing (2023–2025)</div>
+            <div>Head, Commercial Operations (Aug 2025–present)</div>
+          </div>
+          <p>Accelerated ARR from $54M to $88M while cutting opt-out rates from 20% to 5%, driving 3x+ pipeline growth and 5:1 LTV/CAC. Now building a new Commercial Operations function.</p>
+        </article>
+
+        <article class="car-card">
+          <img class="car-logo" src="images/logo-rdc.png" alt="RDC logo">
+          <div class="car-meta">Jun 2017 – Jan 2019 · King of Prussia, PA</div>
+          <h3>RDC</h3>
+          <div class="car-role">Chief Marketing Officer</div>
+          <p>Grew marketing's contribution to bookings from 20% to 43% in under 18 months; lifted inbound demand 48% and brokered 87% of deals over $100K.</p>
+        </article>
+
+        <article class="car-card">
+          <img class="car-logo" src="images/logo-revitas.png" alt="Revitas logo">
+          <div class="car-meta">Dec 2012 – Jan 2017 · Philadelphia, PA</div>
+          <h3>Revitas</h3>
+          <div class="car-role">VP, Products, Marketing &amp; Alliances</div>
+          <p>Secured 34% of new-business pipeline and drove a 52% YoY increase in net-new leads, supporting an EBITDA turnaround from $11M to $2M. Acquired by Model N.</p>
+        </article>
+
+        <article class="car-card">
+          <img class="car-logo" src="images/logo-cdi.jpg" alt="CDI Corporation logo">
+          <div class="car-meta">Apr 2009 – Dec 2012 · Philadelphia, PA</div>
+          <h3>CDI Corporation</h3>
+          <div class="car-role">Director, Global Strategy &amp; Solutions</div>
+          <p>Secured $30M+ in TCV wins at Ameriprise, Intel, McKesson, and Tufts University; grew IT Solutions from 12% to 16% of corporate revenue.</p>
+        </article>
+
+        <article class="car-card">
+          <img class="car-logo" src="images/logo-sap.jpg" alt="SAP logo">
+          <div class="car-meta">Oct 2007 – Mar 2008 · Newtown Square, PA</div>
+          <h3>SAP America</h3>
+          <div class="car-role">SVP, North America Marketing</div>
+          <p>Led a 110-person field and telesales marketing team across 25 vertical channels. Cut cost-per-lead 60% and beat pipeline-contribution target, 24% vs. 20%.</p>
+        </article>
+
+        <article class="car-card">
+          <img class="car-logo" src="images/logo-overland.jpg" alt="Overland Storage logo">
+          <div class="car-meta">Early career · San Diego, CA</div>
+          <h3>Overland Storage</h3>
+          <div class="car-role">VP, Marketing &amp; Chief Strategy Officer</div>
+          <p>Set marketing and corporate strategy as a member of the executive team.</p>
+        </article>
+
+        <article class="car-card">
+          <img class="car-logo" src="images/logo-ca.png" alt="CA Technologies logo">
+          <div class="car-meta">Early career · Islandia, NY</div>
+          <h3>CA Technologies</h3>
+          <div class="car-role">VP, Field Marketing / Brand Management</div>
+          <p>Led field marketing and brand management for Computer Associates.</p>
         </article>
 
         <article class="car-card">
@@ -439,62 +539,11 @@
         </article>
 
         <article class="car-card">
-          <img class="car-logo" src="images/logo-ca.png" alt="CA Technologies logo">
-          <div class="car-meta">Early career · Islandia, NY</div>
-          <h3>CA Technologies</h3>
-          <div class="car-role">VP, Field Marketing / Brand Management</div>
-          <p>Led field marketing and brand management for Computer Associates.</p>
-        </article>
-
-        <article class="car-card">
-          <img class="car-logo" src="images/logo-overland.jpg" alt="Overland Storage logo">
-          <div class="car-meta">Early career · San Diego, CA</div>
-          <h3>Overland Storage</h3>
-          <div class="car-role">VP, Marketing &amp; Chief Strategy Officer</div>
-          <p>Set marketing and corporate strategy as a member of the executive team.</p>
-        </article>
-
-        <article class="car-card">
-          <img class="car-logo" src="images/logo-sap.jpg" alt="SAP logo">
-          <div class="car-meta">Oct 2007 – Mar 2008 · Newtown Square, PA</div>
-          <h3>SAP America</h3>
-          <div class="car-role">SVP, North America Marketing</div>
-          <p>Led a 110-person field and telesales marketing team across 25 vertical channels. Cut cost-per-lead 60% and beat pipeline-contribution target, 24% vs. 20%.</p>
-        </article>
-
-        <article class="car-card">
-          <img class="car-logo" src="images/logo-cdi.jpg" alt="CDI Corporation logo">
-          <div class="car-meta">Apr 2009 – Dec 2012 · Philadelphia, PA</div>
-          <h3>CDI Corporation</h3>
-          <div class="car-role">Director, Global Strategy &amp; Solutions</div>
-          <p>Secured $30M+ in TCV wins at Ameriprise, Intel, McKesson, and Tufts University; grew IT Solutions from 12% to 16% of corporate revenue.</p>
-        </article>
-
-        <article class="car-card">
-          <img class="car-logo" src="images/logo-revitas.png" alt="Revitas logo">
-          <div class="car-meta">Dec 2012 – Jan 2017 · Philadelphia, PA</div>
-          <h3>Revitas</h3>
-          <div class="car-role">VP, Products, Marketing &amp; Alliances</div>
-          <p>Secured 34% of new-business pipeline and drove a 52% YoY increase in net-new leads, supporting an EBITDA turnaround from $11M to $2M. Acquired by Model N.</p>
-        </article>
-
-        <article class="car-card">
-          <img class="car-logo" src="images/logo-rdc.png" alt="RDC logo">
-          <div class="car-meta">Jun 2017 – Jan 2019 · King of Prussia, PA</div>
-          <h3>RDC</h3>
-          <div class="car-role">Chief Marketing Officer</div>
-          <p>Grew marketing's contribution to bookings from 20% to 43% in under 18 months; lifted inbound demand 48% and brokered 87% of deals over $100K.</p>
-        </article>
-
-        <article class="car-card">
-          <img class="car-logo" src="images/logo-integrichain.png" alt="IntegriChain logo">
-          <div class="car-meta">Jan 2020 – Present · Philadelphia, PA</div>
-          <h3>IntegriChain</h3>
-          <div class="car-role-list">
-            <div>VP, Marketing → Senior VP, Marketing</div>
-            <div>Head, Commercial Operations (current)</div>
-          </div>
-          <p>Accelerated ARR from $54M to $88M while cutting opt-out rates from 20% to 5%, driving 3x+ pipeline growth and 5:1 LTV/CAC. Now building a new Commercial Operations function.</p>
+          <img class="car-logo" src="images/logo-eci.jpg" alt="ECI Technology logo">
+          <div class="car-meta">Early career · New York</div>
+          <h3>ECI Technology</h3>
+          <div class="car-role">Co-Founder</div>
+          <p>Helped found a pioneer in electrochemical test equipment, later a Deloitte "Fast 100" award winner.</p>
         </article>
 
       </div>
@@ -598,9 +647,29 @@
 <section class="contact" id="contact">
   <div class="wrap">
     <h2>Let's talk</h2>
-    <div class="contact-links">
-      <a href="https://www.linkedin.com/in/michaelkerman/" target="_blank" rel="noopener">LinkedIn — /in/michaelkerman</a>
-      <a href="https://twitter.com/MichaelKerman" target="_blank" rel="noopener">Twitter/X — @MichaelKerman</a>
+    <div class="contact-layout">
+      <form id="contactForm" class="contact-form">
+        <input type="hidden" name="access_key" value="81b0b2ca-bdf9-4e25-8067-d89d40d3140a">
+        <input type="hidden" name="subject" value="New message from michaelkerman.com">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+        <label for="cf-name">Name</label>
+        <input id="cf-name" type="text" name="name" required>
+
+        <label for="cf-email">Email</label>
+        <input id="cf-email" type="email" name="email" required>
+
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="4" required></textarea>
+
+        <button type="submit" id="cf-submit">Send message</button>
+        <div id="cf-status" class="cf-status" role="status"></div>
+      </form>
+
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/michaelkerman/" target="_blank" rel="noopener">LinkedIn — /in/michaelkerman</a>
+        <a href="https://twitter.com/MichaelKerman" target="_blank" rel="noopener">Twitter/X — @MichaelKerman</a>
+      </div>
     </div>
   </div>
 </section>
@@ -616,6 +685,41 @@
     var gap = 22;
     var amount = (card.offsetWidth + gap) * dir;
     track.scrollBy({ left: amount, behavior: 'smooth' });
+  }
+
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var status = document.getElementById('cf-status');
+      var submitBtn = document.getElementById('cf-submit');
+      submitBtn.disabled = true;
+      status.textContent = 'Sending…';
+      status.className = 'cf-status';
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          submitBtn.disabled = false;
+          if (data.success) {
+            status.textContent = 'Thanks — your message was sent. I\'ll get back to you soon.';
+            status.className = 'cf-status ok';
+            contactForm.reset();
+          } else {
+            status.textContent = 'Something went wrong. Please try again, or reach me on LinkedIn.';
+            status.className = 'cf-status err';
+          }
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          status.textContent = 'Something went wrong. Please try again, or reach me on LinkedIn.';
+          status.className = 'cf-status err';
+        });
+    });
   }
 </script>
 
